@@ -2,7 +2,7 @@ name: Bot Status Check
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/45 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -30,5 +30,6 @@ jobs:
           API_ID: ${{ secrets.API_ID }}
           API_HASH: ${{ secrets.API_HASH }}
           PYRO_SESSION: ${{ secrets.PYRO_SESSION }}
+          MSG_BUTTONS: ${{ secrets.MSG_BUTTONS }}
           CONFIG_JSON_URL: ${{ secrets.CONFIG_JSON_URL }}
           CONFIG_ENV_URL: ${{ secrets.CONFIG_ENV_URL }}
