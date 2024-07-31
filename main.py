@@ -62,9 +62,9 @@ except Exception as e:
     log.error("Error: config.json is not valid")
     exit(1)
 
-HEADER_MSG = getenv("HEADER_MSG", "**Telegram Bot Status :**")
-FOOTER_MSG = getenv("FOOTER_MSG", "**Updates :** _@FZXParadox_\n\n**Repo :** __https://github.com/SilentDemonSD/TgBotStatus__")
-MSG_BUTTONS = getenv("MSG_BUTTONS", "𝙎𝙋𝙭𝘾𝙤𝙢𝙥𝙧𝙚𝙨𝙨𝙤𝙧𝘽𝙤𝙩#https://t.me/SPxCompressorBot?start=start|𝙎𝙋𝙭𝙀𝙣𝙘𝙤𝙙𝙚𝙧𝘽𝙤𝙩#https://t.me/SPxCompressBot?start=start||𝙎𝙋𝙭𝙀𝙣𝙘𝙤𝙙𝙚𝙧𝙊𝙣𝙚𝘽𝙤𝙩#https://t.me/SPxCompressOneBot?start=start|𝙎𝙋𝙭𝙀𝙣𝙘𝙤𝙙𝙚𝙧𝙏𝙬𝙤𝘽𝙤𝙩#https://t.me/SPxCompressTwoBot?start=start||𝙎𝙋𝙭𝙀𝙣𝙘𝙤𝙙𝙚𝙧𝙏𝙝𝙧𝙚𝙚𝘽𝙤𝙩#https://t.me/SPxCompressThreeBot?start=start|𝙎𝙋𝙭𝙈𝙚𝙧𝙜𝙚#https://t.me/SPxMergeBot?start=start||𝙎𝙋𝙭𝙑𝙞𝙙𝙚𝙤𝙏𝙧𝙞𝙢𝙢𝙚𝙧#https://t.me/SPxVideoTrimmerBot?start=start|𝙎𝙪𝙗𝙩𝙞𝙩𝙡𝙚 𝙈𝙪𝙭#https://t.me/SPxSubMuxerBot?start=start||𝙎𝙋𝙭𝙐𝙥𝙡𝙤𝙖𝙙𝙚𝙧𝙋𝙧𝙤𝘽𝙤𝙩#https://t.me/SPxUploaderProBot?start=start|𝙎𝙋𝙈𝙇𝙋#https://t.me/SPMLPBOT?start=start||𝙎𝙥𝙭𝙈𝙚𝙜𝙖.𝙣𝙯#https://t.me/SpxMeganzBot?start=start|𝙎𝙋𝙭𝙁𝙞𝙡𝙚𝙏𝙤𝙇𝙞𝙣𝙠𝘽𝙤𝙩#https://t.me/SPxStreamBot?start=start||𝙎𝙋𝙭𝙁𝙞𝙡𝙚𝙎𝙩𝙧𝙚𝙖𝙢𝙎𝙩𝙤𝙧𝙚#https://t.me/SPxFileStreamStoreBot?start=start|𝗦𝗣𝘅𝗙𝗶𝗹𝗲𝗦𝘁𝗼𝗿𝗲𝗕𝗼𝘁#https://t.me/SPxFileStoreBot?start=start||𝙎𝙋𝙭𝙍𝙚𝙨𝙩𝙧𝙞𝙘𝙩𝙚𝙙𝙎𝙖𝙫𝙚𝙧#https://t.me/SPxGetAnyMediaBot?start=start|𝙎𝙋𝙭𝘼𝙣𝙞𝙡𝙞𝙨𝙩𝘽𝙤𝙩#https://t.me/aninoti_robot?start=start||𝙎𝙋𝙭𝘽𝙮𝙥𝙖𝙨𝙨𝘽𝙤𝙩#https://t.me/DirectLink_BypasserAdsBot?start=start|𝙎𝙋𝙭𝙕𝙞𝙥𝙥𝙚𝙧𝘽𝙤𝙩#https://t.me/SPxZipperBot?start=start||𝙎𝙋𝙭𝙄𝙢𝙖𝙜𝙨𝘼𝙧𝙘𝙝𝙞𝙫𝙚𝙧𝘽𝙤𝙩#https://t.me/SPxImagsArchiverBot?start=start|𝙎𝙋𝙭𝙁𝙤𝙧𝙬𝙖𝙧𝙙𝘽𝙤𝙩#https://t.me/SPxForwarderBot?start=start")
+HEADER_MSG = getenv("HEADER_MSG", "")
+FOOTER_MSG = getenv("FOOTER_MSG", "")
+MSG_BUTTONS = getenv("MSG_BUTTONS", "")
 TIME_ZONE = getenv("TIME_ZONE", "Asia/Tokyo")
 
 log.info("Connecting pyroBotClient")
