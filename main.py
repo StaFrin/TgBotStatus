@@ -64,8 +64,8 @@ except Exception as e:
 
 HEADER_MSG = getenv("HEADER_MSG", "**Telegram Bot Status :**")
 FOOTER_MSG = getenv("FOOTER_MSG", "**Updates :** _@FZXParadox_\n\n**Repo :** __https://github.com/SilentDemonSD/TgBotStatus__")
-MSG_BUTTONS = getenv("MSG_BUTTONS", "Join CyberPunk Now!#https://t.me/CyberPunkGrp")
-TIME_ZONE = getenv("TIME_ZONE", "Asia/Kolkata")
+MSG_BUTTONS = getenv("MSG_BUTTONS", "")
+TIME_ZONE = getenv("TIME_ZONE", "Asia/Tokyo")
 
 log.info("Connecting pyroBotClient")
 try:
