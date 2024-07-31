@@ -2,27 +2,26 @@ name: Bot Status Check
 
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 jobs:
   update:
     runs-on: ubuntu-latest
     steps:
-      - name: Initialize Checkout
+      - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: SetUp Python3
+
+      - name: Set Up Python 3.10
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
-      - name: Clone the Repository
-        uses: actions/checkout@master
-        with:
-          repository: ${{ secrets.REPO_NAME }}
+
       - name: Install Dependencies
         run: |
           pip install -q -U pip uv
           uv pip install --system requests python-dotenv pytz pyrofork tgcrypto
+
       - name: Run the UserClient Script
         run: |
           python3 main.py
@@ -32,8 +31,8 @@ jobs:
           PYRO_SESSION: ${{ secrets.PYRO_SESSION }}
           CONFIG_JSON_URL: ${{ secrets.CONFIG_JSON_URL }}
           CONFIG_ENV_URL: ${{ secrets.CONFIG_ENV_URL }}
-          HEADER_MSG="" # Use Markdown / HTML for Formatting
-          FOOTER_MSG="" # Use Markdown / HTML for Formatting
-          BOT_TOKEN="" # Use Bot to Add Message Buttons
-          MSG_BUTTONS="" # b_text#b_url|b_textb_url||b_text#b_url|b_text#b_url
-          TIME_ZONE=
+          HEADER_MSG: ${{ secrets.HEADER_MSG }} # Use Markdown / HTML for Formatting
+          FOOTER_MSG: ${{ secrets.FOOTER_MSG }} # Use Markdown / HTML for Formatting
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }} # Use Bot to Add Message Buttons
+          MSG_BUTTONS: ${{ secrets.MSG_BUTTONS }} # b_text#b_url|b_text#b_url||b_text#b_url|b_text#b_url
+          TIME_ZONE: ${{ secrets.TIME_ZONE }} # E.g., "UTC", "America/New_York"
