@@ -256,7 +256,7 @@ async def check_bots():
 ├ **Date :** `{current_time.strftime('%d %B %Y')}`
 └ **Time Zone :** `{TIME_ZONE} (UTC {current_time.strftime('%z')})`
 
-__• Auto Status Update in 45 mins Interval__
+__• Auto Status Update in 5 hours Interval__
 
 {FOOTER_MSG}"""
     await editStatusMsg(status_message)
